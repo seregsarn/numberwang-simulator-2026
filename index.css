@@ -1,0 +1,137 @@
+body {
+  font-family: system-ui, sans-serif;
+  background: #f5f5f2;
+  color: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem;
+  color: #444;
+}
+
+.container {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #e0e0d8;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.grid-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.card {
+  background: #f5f5f2;
+  border-radius: 8px;
+  padding: 0.875rem 1rem;
+  border: 1px solid #e0e0d8;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.card.active {
+  background: #e8f0fb;
+  border-color: #7aabee;
+}
+
+.card-label {
+  font-size: 11px;
+  color: #888;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-name {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0;
+  color: #333;
+}
+
+.sound-row {
+  margin-bottom: 1.25rem;
+}
+
+.sound-row label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.sound-row label span {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.delay-row {
+  margin-bottom: 1.25rem;
+}
+
+.delay-row label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.delay-row label span {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: #4a7fd4;
+}
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+button:hover:not(:disabled) { background: #f0f0ec; }
+button:active:not(:disabled) { background: #e8e8e4; }
+button:disabled { opacity: 0.4; cursor: default; }
+
+#start-btn { border-color: #7aabee; color: #1a5baa; }
+#stop-btn  { border-color: #e09090; color: #a02020; }
+
+.status {
+  background: #f5f5f2;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 13px;
+  color: #666;
+  min-height: 20px;
+}
